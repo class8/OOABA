@@ -48,7 +48,4 @@ function submit(id,password) {
 	});
 	
 }
-=======
- * dfsdfsdf
- */
->>>>>>> 7bfbc7dd37ea0ab2616efaca4a04e724bd03a882
+

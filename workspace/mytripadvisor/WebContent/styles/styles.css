@@ -607,8 +607,9 @@ button:hover {
    background-color: #a4aab2;
 }
 
-.form-box.login-box input[type="text"], .from-box.login-box input[type="password"],
-   .from-box.login-box button {
+.form-box.login-box input[type="text"],
+.form-box.login-box input[type="password"],
+.form-box.login-box button {
    width: 470px;
    height: 55px;
 }

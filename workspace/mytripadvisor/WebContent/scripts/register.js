@@ -3,7 +3,7 @@
 $(function() {
 
 	// 출생년도 목록 생성 selectmenu()함수 사용
-	generateYears($('sel-birth'));
+	generateYears($('#sel-birth'));
 
 	var birthSelect = $('sel-birth').selectmenu();
 	birthSelect.selectmenu('menuWidget').addClass('overflow');
@@ -75,17 +75,17 @@ $(function() {
 
 });
 
+// 출생년도 목록 생성
 function generateYears($select) {
 	for (var i = 1970; i <= 2010; i++) {
-
 		$select.append('<option value="' + i + '">' + i + '</option>');
 	}
 }
 
 function validateEmail(email) {
 
+	//email 유효성 검사
 	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(({a-zZ\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
 	return re.test(email);
 
 }

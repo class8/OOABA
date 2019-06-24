@@ -57,7 +57,7 @@ $(function() {
 
 				}
 
-				var accept = $('inp-ccept:checked').val();
+				var accept = $('inp-accept:checked').val();
 				if (!accept) {
 					$('#inp-accept').next().next().html('필수 항목입니다.').show();
 					return;
@@ -84,7 +84,7 @@ function generateYears($select) {
 
 function validateEmail(email) {
 
-	//email 유효성 검사
+	// email 유효성 검사
 	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(({a-zZ\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	return re.test(email);
 

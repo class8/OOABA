@@ -8,15 +8,15 @@
 <title>My Trip Advisor - 상세보기</title>
 <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css" />
 <link rel="stylesheet" href="styles/styles.css" />
-<script src="libs/js.cookie.js"></script>
-<script src="libs/jquery-3.3.1.min.js"></script>
+<script src="libs/js.cookie.js"></script> <!-- 쿠키 자바스크립트 탑재 -->
+<script src="libs/jquery-3.3.1.min.js"></script> <!-- JQuery 탑재 -->
 <script src="libs/galleria/galleria-1.5.7.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5iOBFhquwyOcJAk0JpbyzztfM2vNAno0"></script>
 <script src="scripts/detail.js"></script>
 </head>
 <body>
-	<div id="container">
-		<div id="header" class="inverted">
+	<div id="container"> <!-- 전체를 감싸는 컨테이너 -->
+		<div id="header" class="inverted"> <!-- 최상단 헤더 영역 -->
 			<div>
 				<a href="index.html"><span></span></a>
 				<div class="menu-items right">
@@ -25,12 +25,11 @@
 				</div>
 			</div>
 		</div>
-		<div id="body" class="detail">
+		<div id="body" class="detail"> <!-- 메인 영역 -->
 			<div class="detail-container">
 				<div class="detail-header">
 					<img src="images/icon_list_location.png" />
-					<div class="detail-header-name"></div>
-					|<span class="detail-header-city-name"></span>
+					<div class="detail-header-name"></div>|<span class="detail-header-city-name"></span>
 					<button class="btn-register">여행지 등록하기</button>
 				</div>
 				<div id="detail-images"></div>

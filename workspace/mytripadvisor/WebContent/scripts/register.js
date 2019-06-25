@@ -5,14 +5,14 @@ $(function() {
 	// 출생년도 목록 생성 selectmenu()함수 사용
 	generateYears($('#sel-birth'));
 
-	var birthSelect = $('sel-birth').selectmenu();
+	var birthSelect = $('#sel-birth').selectmenu();
 	birthSelect.selectmenu('menuWidget').addClass('overflow');
 
 	$('#form-register').submit(
 			function(e) {
 				e.preventDefault();
 
-				$(this).find('txt-warning').empty().hide();
+				$(this).find('.txt-warning').empty().hide();
 
 				// 이메일 값을 가져와 유효성 체크를 한다
 				var email = $('#inp-email').val();
@@ -51,7 +51,7 @@ $(function() {
 				var birth = $('#sel-birth').val();
 				if (!birth) {
 
-					$('#sel-birth').siblings('txt-warning').html('필수 항목입니다.')
+					$('#sel-birth').siblings('.txt-warning').html('필수 항목입니다.')
 							.show();
 					return;
 

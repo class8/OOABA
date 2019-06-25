@@ -4,7 +4,10 @@
 
 $(function() {
 	$(window).scroll(function() {
+		//스크롤을 내리 상태에서 페이지를 새로고침하면 헤더가 반전되지 않은 원래상태로 남아있는경우가 있다
+		//브라우저가 새로고침시에 현재스크롤 위치를 기억해두엇다가 로그가 완료되후 그위치로 이동하기 때문
 		var top = $(window).scrollTop();
+		//스크롤위치가 0이 아니지만 새로고침했기때문에 inverted 클래스는 부여하지 않은 상태가 되기때문
 		if (top > 0) {
 			$('#header').addClass('inverted');
 		} else {
@@ -12,6 +15,7 @@ $(function() {
 		}
 
 	});
+	//강제로 scroll이벤트를 한번 발생시킨다
 	$(window).trigger('scroll');// trigger() 자동으로 불러온다
 	/* $('#from').datepicker(); // datepicker의 정보를 가져온다 */
 	var dpFrom = $('#from').datepicker({
@@ -35,7 +39,7 @@ $(function() {
 	});
 
 	dpTo.datepicker('setDate', 4); // setDate의 인자값이 4인것은 3박 4일과 같이 오늘날짜에 4일을 더한
-	// 날짜로 설정하는것이다
+	// 날짜로 설정하는것이다, 내가 원하는대로 뒤에 숫자는 조정가능
 
 	// $.submit()함수로 from의 submit 이벤트 핸들러를 작성한다
 	$('#form-search').submit(function(e) {
@@ -61,7 +65,7 @@ function search(from, to) {
 		from : from,
 		to : to
 	}, function(r) {
-		// console.log(r);// 콘솔로 한번 확인을 해봐라는 뜻!
+		// console.log(r);// 콘솔로 한번 확인을 해보라는 뜻!
 		var $list = $('#list-panel');
 
 		for (var i = 0; i < r.length; i++) {

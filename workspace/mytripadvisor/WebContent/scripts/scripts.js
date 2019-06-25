@@ -38,7 +38,7 @@ $(function() {
 	// 날짜로 설정하는것이다
 
 	// $.submit()함수로 from의 submit 이벤트 핸들러를 작성한다
-	$('#from-search').submit(function(e) {
+	$('#form-search').submit(function(e) {
 		e.preventDefault();// 기본동작이 실행되지 않도록 주의한다
 
 		var from = $('#from').val();

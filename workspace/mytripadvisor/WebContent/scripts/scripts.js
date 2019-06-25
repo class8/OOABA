@@ -58,7 +58,7 @@ function search(from, to) {
 
 	// getJSON()함수로 Ajax요청한다 이 함수는 $.get()에 마지막 인자로 json을 넣는것과 동일한 역할을한다
 	$.getJSON(url, {
-		from : form,
+		from : from,
 		to : to
 	}, function(r) {
 		// console.log(r);// 콘솔로 한번 확인을 해봐라는 뜻!
@@ -75,7 +75,7 @@ function search(from, to) {
 function createListItem(data) {
 	// 일반 dom 엘리먼트 이므로 dom 일레먼트 복제 방법으로 jquery clone() 함수를 사용한다
 	// 복제를 미친 엘리먼트는 더이상 템플릿이 아니기 때문에 id를 지워야 한다
-	var $tmpl = $('.list-item-template').clone().removeAttr('id');
+	var $tmpl = $('#list-item-template').clone().removeAttr('id');
 
 	$tmpl.find('.list-item-image').attr('src', data.titleImageUrl);
 	$tmpl.find('.list-item-name').html(data.name);
